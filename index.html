@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>從台灣現場出發｜The Listening Scene</title>
+<title>散場後...｜從台灣現場出發</title>
 <meta name="description" content="一份給 Spotify Taiwan 的個人行銷提案，從現場音樂出發，測試樂迷會不會回到 Spotify 聽歌。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -229,11 +229,25 @@ html[lang="en"] .bar::before{content:attr(data-en)}
 .contact .label{color:var(--rust)}
 .contact a{font-size:clamp(1.05rem,2vw,1.3rem);font-weight:800;color:var(--ink);overflow-wrap:anywhere}
 .signature{margin:26px 0 4px;font-size:clamp(1.4rem,2.6vw,2rem);font-weight:900;letter-spacing:-.02em}
+.logo{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:var(--ivory);flex:0 0 auto}
+.logo-play{width:30px;height:30px;flex:0 0 auto}
+.logo-play circle{fill:var(--orange)}.logo-play path{fill:var(--ink)}
+.logo:hover .logo-play circle{fill:#ff9779}
+.logo-text{display:grid;gap:5px}
+.logo-name{font-family:"Noto Sans TC",system-ui,sans-serif;font-weight:900;font-size:1.5rem;line-height:1;letter-spacing:.02em;white-space:nowrap}
+html[lang="en"] .logo-name{font-family:system-ui,sans-serif;font-size:1.3rem;letter-spacing:-.01em}
+.logo-bar{display:flex;align-items:center;gap:7px;font-size:.62rem;font-weight:650;color:#c8c7b6;font-variant-numeric:tabular-nums;width:150px}
+.logo-bar i{position:relative;flex:1;height:3px;background:#53594e;border-radius:2px}
+.logo-bar b{position:absolute;inset:0 38% 0 0;background:var(--orange);border-radius:2px}
+.logo-bar u{position:absolute;left:62%;top:50%;width:9px;height:9px;margin:-4.5px 0 0 -4.5px;background:var(--ivory);border-radius:50%}
+.logo:focus-visible{outline:3px solid var(--orange);outline-offset:4px}
+@media(max-width:900px){html[lang="en"] .intro{grid-template-columns:1fr}html[lang="en"] .intro p,html[lang="en"] .summary{max-width:620px}}
+@media(max-width:540px){.logo-bar{display:none}.logo-play{width:26px;height:26px}.logo-name{font-size:1.3rem}}
 </style>
 </head>
 <body>
 <div class="hero"><div class="wrap">
-<header><a class="brand" href="#">THE LISTENING SCENE</a><nav aria-label="章節"><a href="#opportunity">機會</a><a href="#gap">缺口</a><a href="#route">音樂路徑</a><a href="#pilot">試辦計畫</a></nav>
+<header><a class="logo" href="#" aria-label="散場後...，回到頁首"><svg class="logo-play" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="11"/><path d="M8.5 6.5v9l7-4.5z"/></svg><span class="logo-text"><span class="logo-name">散場後...</span><span class="logo-bar" aria-hidden="true"><span>0:00</span><i><b></b><u></u></i><span>∞</span></span></span></a><nav aria-label="章節"><a href="#opportunity">機會</a><a href="#gap">缺口</a><a href="#route">音樂路徑</a><a href="#pilot">試辦計畫</a></nav>
 <div class="language-switch" role="group" aria-label="選擇語言 / Language">
 <button type="button" data-language="zh" lang="zh-Hant-TW" aria-pressed="true">中文</button>
 <button type="button" data-language="en" lang="en" aria-pressed="false">EN</button>
@@ -428,6 +442,8 @@ html[lang="en"] .bar::before{content:attr(data-en)}
 
 <script>
 const englishCopy = {
+  "散場後...": "After the Show...",
+  "散場後...，回到頁首": "After the Show..., back to top",
   "散場後，哪首歌還在聽？": "After the Show, Which Songs Do Fans Keep Playing?",
   "孫燕姿《就在日落以後》巡迴在台灣有兩站。我把兩站對齊來看〈逆光〉：演出前一週都不在榜上，演出當週回榜，再留兩個完整週，第三週才掉出榜外。": "Stefanie Sun’s 就在日落以後 (After Sunset) tour made two stops in Taiwan. Lined up side by side, “逆光” (Against the Light) follows the same path at both: off the chart the week before, back on in the show week, there for two more full weeks, and gone by the third.",
   "〈逆光〉在高雄站與台北站前後的週榜名次": "Weekly chart positions for “逆光” (Against the Light) around the Kaohsiung and Taipei shows",
@@ -686,8 +702,8 @@ for (const element of translationRoot.querySelectorAll("[aria-label], [alt]")) {
 }
 
 const metadata = {
-  zh: ["從台灣現場出發｜The Listening Scene", "一份給 Spotify Taiwan 的個人行銷提案，從現場音樂出發，測試樂迷會不會回到 Spotify 聽歌。"],
-  en: ["From Taiwan’s Live Stages | The Listening Scene", "An independent marketing proposal for Spotify Taiwan: can live music stories bring fans back to listen?"]
+  zh: ["散場後...｜從台灣現場出發", "一份給 Spotify Taiwan 的個人行銷提案，從現場音樂出發，測試樂迷會不會回到 Spotify 聽歌。"],
+  en: ["After the Show... | From Taiwan’s Live Stages", "An independent marketing proposal for Spotify Taiwan: can live music stories bring fans back to listen?"]
 };
 const description = document.querySelector('meta[name="description"]');
 
