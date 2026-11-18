@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>從台灣現場出發｜The Listening Scene</title>
 <meta name="description" content="一份給 Spotify Taiwan 的個人行銷提案，從現場音樂出發，測試樂迷會不會回到 Spotify 聽歌。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@900&display=swap">
 <style>
 :root{--ink:#172820;--paper:#f7f0e3;--ivory:#fff9ed;--rule:#bdb8aa;--muted:#53594e;--green:#275744;--orange:#f87954;--rust:#8a3421;--lilac:#e4dcfa}
 *{box-sizing:border-box}
@@ -28,7 +31,7 @@ header a{text-decoration:none}
 nav{display:flex;flex-wrap:wrap;gap:20px;font-size:.86rem}
 nav a:hover{text-decoration:underline}
 .intro{display:grid;grid-template-columns:minmax(0,.83fr) minmax(0,1.17fr);gap:35px;align-items:center;padding:58px 0 67px}
-h1{font-size:clamp(2.4rem,5.6vw,4.5rem);font-weight:900;letter-spacing:-.075em;line-height:1.01;margin:12px 0 20px}
+h1{font-size:clamp(2.2rem,5.1vw,4.1rem);font-weight:900;letter-spacing:-.075em;line-height:1.01;margin:12px 0 20px}
 .intro p{max-width:435px;color:#e5dece}
 .intro .question{font-size:clamp(1.05rem,1.9vw,1.37rem);font-weight:750;color:var(--ivory);margin-bottom:6px}
 .hero-art{position:relative;min-width:0}
@@ -102,7 +105,7 @@ summary{cursor:pointer;font-weight:750}
  .wrap{width:calc(100% - 48px)}.intro{gap:22px;padding:42px 0 48px}.song-card summary{min-height:83px}.record-icon{width:26px;height:26px}.chart-table td:last-child{max-width:200px}
 }
 @media(max-width:680px){
- html[lang^="zh"] h1{font-size:clamp(2.4rem,13vw,4.6rem)}
+ html[lang^="zh"] h1{font-size:clamp(2.2rem,12vw,4.6rem)}
  .wrap{width:calc(100% - 34px)}header{flex-wrap:wrap;gap:10px;padding:15px 0}nav{gap:12px 15px}
  .intro,.song-grid{grid-template-columns:1fr}.intro{gap:25px;padding:31px 0 36px}.hero-art figcaption{text-align:left}.hero-art img{aspect-ratio:1.65}
  main>section{padding:47px 0}.deck{margin-bottom:18px}h2{text-wrap:initial}
@@ -117,6 +120,9 @@ summary{cursor:pointer;font-weight:750}
 .language-switch button[aria-pressed="true"]{background:var(--ivory);color:var(--ink)}
 .language-switch button:focus-visible{outline:2px solid var(--orange);outline-offset:2px}
 html[lang^="zh"] h1{white-space:nowrap}
+html[lang^="zh"] h1,html[lang^="zh"] h2,html[lang^="zh"] h3,html[lang^="zh"] .song-title{font-family:"Noto Sans TC",system-ui,sans-serif;font-weight:900;letter-spacing:.01em}
+html[lang^="zh"] h2{max-width:none}
+html[lang^="zh"] .song-title{letter-spacing:-.035em}
 html[lang="en"] h1{font-size:clamp(2.75rem,5.8vw,5.75rem);letter-spacing:-.065em}
 html[lang="en"] .ticket-main strong{font-size:clamp(2.65rem,7vw,6.35rem)}
 html[lang="en"] .pilot-lead .big small{font-size:.28em}
