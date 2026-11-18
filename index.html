@@ -200,6 +200,30 @@ html[lang="en"] .bar::before{content:attr(data-en)}
  .event-panel{padding:14px 12px 12px}
  .compare .measure{grid-template-columns:minmax(0,.8fr) minmax(0,2fr)}
 }
+.afterglow{margin-top:44px}
+.afterglow .sub-h{margin-top:0}
+.stop-table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;table-layout:fixed}
+.stop-table th,.stop-table td{padding:11px 4px;text-align:center;border-bottom:1px solid #d8d3c3;vertical-align:middle}
+.stop-table thead th{font-size:.74rem;color:var(--muted);line-height:1.25}
+.stop-table thead th.is-show{color:var(--rust)}
+.stop-table thead th:first-child,.stop-table tbody th{text-align:left;width:24%}
+.stop-table tbody tr:last-child>*{border-bottom:0}
+.stop-table tbody th small{display:block;font-weight:500;color:var(--muted);font-size:.7rem;line-height:1.35}
+.stop-table td b{display:block;font-size:1rem}
+.stop-table td small{display:block;font-size:.66rem;color:var(--muted)}
+.stop-table td.on b{color:var(--green)}
+.stop-table td.show{background:#ffdfb2}.stop-table td.show b{color:var(--rust)}
+.stop-table td.off{font-size:.72rem;color:#8a8273}
+.findings.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.takeaway{margin:20px 0 6px;max-width:820px;font-weight:750}
+.persist .measure{grid-template-columns:minmax(0,1.1fr) repeat(4,minmax(0,1fr))}
+@media(max-width:900px){.findings.two{grid-template-columns:1fr}}
+@media(max-width:680px){
+ .stop-table th,.stop-table td{padding:9px 1px}.stop-table thead th{font-size:.62rem}
+ .stop-table td b{font-size:.8rem}.stop-table td small{font-size:.56rem}.stop-table td.off{font-size:.6rem}
+ .stop-table tbody th{font-size:.8rem}.stop-table tbody th small{font-size:.6rem}
+ .persist .measure{font-size:.72rem;gap:5px}
+}
 </style>
 </head>
 <body>
@@ -260,9 +284,36 @@ html[lang="en"] .bar::before{content:attr(data-en)}
 </div>
 </div>
 <p class="chart-note">橘色是演出週。週榜日期是該週最後一天（週四），每期涵蓋前七天。每組各自用一個刻度。</p>
+<div class="afterglow">
+<h3 class="sub-h">散場後，哪首歌還在聽？</h3>
+<p class="deck">孫燕姿《就在日落以後》巡迴在台灣有兩站。我把兩站對齊來看〈逆光〉：演出前一週都不在榜上，演出當週回榜，再留兩個完整週，第三週才掉出榜外。</p>
+<div class="chart-shell"><table class="stop-table" aria-label="〈逆光〉在高雄站與台北站前後的週榜名次">
+<thead><tr><th scope="col">相對週次</th><th scope="col">前 2 週</th><th scope="col">前 1 週</th><th scope="col" class="is-show">演出週</th><th scope="col">後 1 週</th><th scope="col">後 2 週</th><th scope="col">後 3 週</th></tr></thead>
+<tbody><tr><th scope="row">高雄站<small>2025/8/16–17 · 高雄巨蛋</small></th><td class="off">未進榜</td><td class="off">未進榜</td><td class="on show"><b>#81</b><small>114,353</small></td><td class="on"><b>#156</b><small>91,123</small></td><td class="on"><b>#191</b><small>83,715</small></td><td class="off">未進榜</td></tr>
+<tr><th scope="row">台北站<small>2026/5/15、5/17 · 臺北大巨蛋</small></th><td class="on"><b>#193</b><small>95,597</small></td><td class="off">未進榜</td><td class="on show"><b>#86</b><small>128,177</small></td><td class="on"><b>#132</b><small>108,638</small></td><td class="on"><b>#192</b><small>90,840</small></td><td class="off">未進榜</td></tr></tbody></table></div>
+<p class="chart-note">格子裡是名次和該週榜單播放數。未進榜代表週榜沒有提供該期的播放數。〈逆光〉在兩站之前都有上榜紀錄，所以用「回榜」。</p>
+<div class="findings two">
+<div><h3>〈逆光〉：熱度停留兩週</h3><p>同一首歌在同一趟巡迴的兩站，走勢幾乎一樣。台北站當週新進榜的六首歌裡，兩週後只剩〈逆光〉還在。</p></div>
+<div><h3>〈開始懂了〉：熱度留了下來</h3><p>兩站演出後的八個完整榜週，播放都高於各自演出前的水準。高雄站的播放高點，還出現在散場後的第一週。</p></div>
+</div>
+<p class="takeaway">這給了策展一個具體的測試時機：散場後推出回聽歌單，一週後再用其中一首歌，帶出另一條作品路徑。</p>
+<details><summary>兩站演出前就在榜上的五首歌，各自留了多久？</summary>
+<p>以各站演出前兩期的平均榜單播放數為基準，從演出後第一個完整榜週開始，最多看八週。「至少 8 週」表示追蹤到第八週仍符合條件；連續週數在第一次中斷時就停止計算。</p>
+<div class="table persist" role="table" aria-label="五首歌在兩站演出後的留榜與播放">
+<div class="measure" role="row"><span role="columnheader">曲目</span><span role="columnheader">高雄後連續在榜</span><span role="columnheader">台北後連續在榜</span><span role="columnheader">高雄後高於基準</span><span role="columnheader">台北後高於基準</span></div>
+<div class="measure" role="row"><span role="cell">〈遇見〉</span><span role="cell">至少 8 週</span><span role="cell">至少 8 週</span><span role="cell">至少 8 週</span><span role="cell">1 週</span></div>
+<div class="measure" role="row"><span role="cell">〈我懷念的〉</span><span role="cell">至少 8 週</span><span role="cell">至少 8 週</span><span role="cell">2 週</span><span role="cell">2 週</span></div>
+<div class="measure" role="row"><span role="cell">〈我不難過〉</span><span role="cell">7 週</span><span role="cell">至少 8 週</span><span role="cell">2 週</span><span role="cell">7 週</span></div>
+<div class="measure" role="row"><span role="cell">〈開始懂了〉</span><span role="cell">至少 8 週</span><span role="cell">至少 8 週</span><span role="cell">至少 8 週</span><span role="cell">至少 8 週</span></div>
+<div class="measure" role="row"><span role="cell">〈雨天〉</span><span role="cell">2 週</span><span role="cell">至少 8 週</span><span role="cell">0 週</span><span role="cell">2 週</span></div>
+</div>
+<p>留在榜上，不等於播放還高於演出前。像〈雨天〉在高雄站後連續在榜兩週，但第一個完整榜週的播放就已經低於演出前的基準。</p>
+</details>
+<p class="source">來源：<a href="https://kworb.net/spotify/track/4x1hB3Yg01Aq6J6q0deS9M.html">Kworb · Spotify 台灣歷史週榜</a>（台北站與 Spotify Charts CSV 核對一致） · <a href="https://news.tvbs.com.tw/entertainment/music/2665956">高雄站場次報導</a></p>
+</div>
 <div class="findings">
 <div><h3>演出確實會推動收聽</h3><p>三組藝人在演出週的播放都明顯上升，而且都有歌在同一週進榜或重新進榜。樂迷會在演出前後主動找歌來聽。</p></div>
-<div><h3>熱度不會自己留下來</h3><p>孫燕姿那週的增幅最大，退得也最快：兩週後只剩 24%。上榜歌從 11 首減到 6 首，大多是經典舊歌。</p></div>
+<div><h3>熱度不會自己留下來</h3><p>孫燕姿那週的增幅最大，退得也最快：兩週後只剩 24%。上榜歌從 5 首變 11 首，再減回 6 首，大多是經典舊歌。</p></div>
 <div><h3>有下一首可聽，熱度比較留得住</h3><p>冰球樂團有新專輯《我很抱歉》可以接著聽。演出四週後，〈不在乎〉和〈能不能和我留在台北（陪我幾天）〉都還在榜上。這是路徑想複製的狀態。</p></div>
 </div>
 <aside>週榜只能看到 Top 200，第 200 名每週大約 9 萬次播放。比較小的演出（例如一月的落日飛車）在週榜上幾乎看不見，新歌進榜也會讓加總變大。週榜也分不出哪些播放來自去過現場的人。這些都需要 Spotify 的內部資料確認，但方向很清楚：演出後的兩週，是最值得接住樂迷的時候。</aside>
@@ -286,7 +337,7 @@ html[lang="en"] .bar::before{content:attr(data-en)}
 <ol class="stops">
 <li><span class="stop-label">入口歌</span><a href="https://open.spotify.com/track/3xJK8ywApYVEYIDhymYMC6">〈遇見〉</a><p>2003 年電影《向左走・向右走》的主題曲，在 Spotify 台灣週榜上累積超過 260 週。</p></li>
 <li><span class="venue-stamp">5/15、5/17 · 臺北大巨蛋</span><p>《就在日落以後》巡迴。她睽違 12 年回台北開唱，兩場約 8 萬張票全部售完。</p></li>
-<li><span class="stop-label">下一首</span><a href="https://open.spotify.com/track/68tZwwRuo9ip5gRQFG1XWF">〈開始懂了〉</a><p>演出那週從第 49 名升到第 10 名。再接到同一週進榜的〈天黑黑〉，邀樂迷說一段這些歌和台北的記憶。</p></li>
+<li><span class="stop-label">下一首</span><a href="https://open.spotify.com/track/4x1hB3Yg01Aq6J6q0deS9M">〈逆光〉</a><p>高雄和台北兩站，它都在演出當週回榜、再留兩週。散場後從〈遇見〉接到〈逆光〉，邀樂迷說一段這些歌和台北的記憶。</p></li>
 </ol>
 </article>
 <article class="route-card">
@@ -372,6 +423,51 @@ html[lang="en"] .bar::before{content:attr(data-en)}
 
 <script>
 const englishCopy = {
+  "散場後，哪首歌還在聽？": "After the Show, Which Songs Do Fans Keep Playing?",
+  "孫燕姿《就在日落以後》巡迴在台灣有兩站。我把兩站對齊來看〈逆光〉：演出前一週都不在榜上，演出當週回榜，再留兩個完整週，第三週才掉出榜外。": "Stefanie Sun’s 就在日落以後 tour made two stops in Taiwan. Lined up side by side, “逆光” follows the same path at both: off the chart the week before, back on in the show week, there for two more full weeks, and gone by the third.",
+  "〈逆光〉在高雄站與台北站前後的週榜名次": "Weekly chart positions for “逆光” around the Kaohsiung and Taipei shows",
+  "相對週次": "Week",
+  "前 2 週": "−2",
+  "前 1 週": "−1",
+  "演出週": "Show",
+  "後 1 週": "+1",
+  "後 2 週": "+2",
+  "後 3 週": "+3",
+  "高雄站": "Kaohsiung",
+  "台北站": "Taipei",
+  "2025/8/16–17 · 高雄巨蛋": "Aug 16–17, 2025 · Kaohsiung Arena",
+  "2026/5/15、5/17 · 臺北大巨蛋": "May 15 & 17, 2026 · Taipei Dome",
+  "未進榜": "Off",
+  "格子裡是名次和該週榜單播放數。未進榜代表週榜沒有提供該期的播放數。〈逆光〉在兩站之前都有上榜紀錄，所以用「回榜」。": "Each cell shows the chart position and that week’s chart streams. “Off” means the song wasn’t in the Top 200, so the chart gives no stream count. “逆光” had charted before both stops, so these are re-entries.",
+  "〈逆光〉：熱度停留兩週": "“逆光”: The Lift Lasts Two Weeks",
+  "同一首歌在同一趟巡迴的兩站，走勢幾乎一樣。台北站當週新進榜的六首歌裡，兩週後只剩〈逆光〉還在。": "The same song followed almost the same path at two stops on one tour. Of the six songs that entered the chart in the Taipei show week, only “逆光” was still there two weeks later.",
+  "〈開始懂了〉：熱度留了下來": "“開始懂了”: The Lift Stays",
+  "兩站演出後的八個完整榜週，播放都高於各自演出前的水準。高雄站的播放高點，還出現在散場後的第一週。": "For eight full chart weeks after each stop, its streams stayed above the pre-show level. In Kaohsiung, its peak came in the first full week after the show.",
+  "這給了策展一個具體的測試時機：散場後推出回聽歌單，一週後再用其中一首歌，帶出另一條作品路徑。": "That suggests a concrete moment to test: release a replay playlist right after the show, then a week later use one of its songs to open a new route.",
+  "兩站演出前就在榜上的五首歌，各自留了多久？": "How Long Did Five Songs Already on the Chart Hold Up?",
+  "以各站演出前兩期的平均榜單播放數為基準，從演出後第一個完整榜週開始，最多看八週。「至少 8 週」表示追蹤到第八週仍符合條件；連續週數在第一次中斷時就停止計算。": "The baseline is each song’s average chart streams in the two weeks before each stop. Counting starts with the first full chart week after the show and runs up to eight weeks. “8+ weeks” means the condition still held at week eight. A streak stops at its first break.",
+  "五首歌在兩站演出後的留榜與播放": "Chart runs and streams for five songs after each stop",
+  "曲目": "Song",
+  "高雄後連續在榜": "On chart after Kaohsiung",
+  "台北後連續在榜": "On chart after Taipei",
+  "高雄後高於基準": "Above baseline after Kaohsiung",
+  "台北後高於基準": "Above baseline after Taipei",
+  "〈我懷念的〉": "“我懷念的”",
+  "〈我不難過〉": "“我不難過”",
+  "〈雨天〉": "“雨天”",
+  "〈逆光〉": "“逆光”",
+  "至少 8 週": "8+ weeks",
+  "7 週": "7 weeks",
+  "2 週": "2 weeks",
+  "1 週": "1 week",
+  "0 週": "0 weeks",
+  "留在榜上，不等於播放還高於演出前。像〈雨天〉在高雄站後連續在榜兩週，但第一個完整榜週的播放就已經低於演出前的基準。": "Staying on the chart is not the same as staying above the pre-show level. After Kaohsiung, “雨天” charted for two straight weeks, but its streams fell below the baseline in the first full week.",
+  "來源：": "Source: ",
+  "Kworb · Spotify 台灣歷史週榜": "Kworb · Spotify Taiwan weekly chart history",
+  "（台北站與 Spotify Charts CSV 核對一致） ·": " (Taipei figures match the Spotify Charts CSVs) ·",
+  "高雄站場次報導": "Kaohsiung show coverage",
+  "高雄和台北兩站，它都在演出當週回榜、再留兩週。散場後從〈遇見〉接到〈逆光〉，邀樂迷說一段這些歌和台北的記憶。": "At both the Kaohsiung and Taipei stops, it re-entered the chart in the show week and stayed two more weeks. After the show, the route goes from “遇見” to “逆光” and asks fans to share a memory of these songs and Taipei.",
+  "孫燕姿那週的增幅最大，退得也最快：兩週後只剩 24%。上榜歌從 5 首變 11 首，再減回 6 首，大多是經典舊歌。": "Stefanie Sun had the biggest jump and the fastest fade. Two weeks later her gain was down to 24%. Her charting songs went from 5 to 11 and back to 6, mostly older favorites.",
   "章節": "Sections",
   "機會": "Opportunity",
   "缺口": "Gap",
@@ -430,7 +526,7 @@ const englishCopy = {
   "演出確實會推動收聽": "Shows Do Drive Listening",
   "三組藝人在演出週的播放都明顯上升，而且都有歌在同一週進榜或重新進榜。樂迷會在演出前後主動找歌來聽。": "All three artists saw a clear rise in the show week, and each had a song enter or re-enter the chart that same week. Fans go looking for music around a show.",
   "熱度不會自己留下來": "The Lift Doesn’t Stay on Its Own",
-  "孫燕姿那週的增幅最大，退得也最快：兩週後只剩 24%。上榜歌從 11 首減到 6 首，大多是經典舊歌。": "Stefanie Sun had the biggest jump and the fastest fade. Two weeks later her gain was down to 24%, and her charting songs went from 11 to 6, mostly older favorites.",
+  "孫燕姿那週的增幅最大，退得也最快：兩週後只剩 24%。上榜歌從 5 首變 11 首，再減回 6 首，大多是經典舊歌。": "Stefanie Sun had the biggest jump and the fastest fade. Two weeks later her gain was down to 24%, and her charting songs went from 11 to 6, mostly older favorites.",
   "有下一首可聽，熱度比較留得住": "Fans Stay When There’s a Next Song",
   "冰球樂團有新專輯《我很抱歉》可以接著聽。演出四週後，〈不在乎〉和〈能不能和我留在台北（陪我幾天）〉都還在榜上。這是路徑想複製的狀態。": "icyball had a new album, 我很抱歉, for fans to move on to. Four weeks after the shows, both “不在乎” and “能不能和我留在台北（陪我幾天）” were still charting. That is what the routes aim to repeat.",
   "週榜只能看到 Top 200，第 200 名每週大約 9 萬次播放。比較小的演出（例如一月的落日飛車）在週榜上幾乎看不見，新歌進榜也會讓加總變大。週榜也分不出哪些播放來自去過現場的人。這些都需要 Spotify 的內部資料確認，但方向很清楚：演出後的兩週，是最值得接住樂迷的時候。": "The public chart only shows the Top 200, and No. 200 gets about 90,000 streams a week. Smaller acts barely register (Sunset Rollercoaster’s January shows left no trace), and new chart entries also inflate the totals. The chart can’t tell which streams came from people who were at the show. Spotify’s internal data would need to confirm all of this, but the direction is clear: the two weeks after a show are when fans are most worth catching.",
