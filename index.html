@@ -229,25 +229,21 @@ html[lang="en"] .bar::before{content:attr(data-en)}
 .contact .label{color:var(--rust)}
 .contact a{font-size:clamp(1.05rem,2vw,1.3rem);font-weight:800;color:var(--ink);overflow-wrap:anywhere}
 .signature{margin:26px 0 4px;font-size:clamp(1.4rem,2.6vw,2rem);font-weight:900;letter-spacing:-.02em}
-.logo{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:var(--ivory);flex:0 0 auto}
-.logo-play{width:30px;height:30px;flex:0 0 auto}
-.logo-play circle{fill:var(--orange)}.logo-play path{fill:var(--ink)}
-.logo:hover .logo-play circle{fill:#ff9779}
-.logo-text{display:grid;gap:5px}
-.logo-name{font-family:"Noto Sans TC",system-ui,sans-serif;font-weight:900;font-size:1.5rem;line-height:1;letter-spacing:.02em;white-space:nowrap}
-html[lang="en"] .logo-name{font-family:system-ui,sans-serif;font-size:1.3rem;letter-spacing:-.01em}
-.logo-bar{display:flex;align-items:center;gap:7px;font-size:.62rem;font-weight:650;color:#c8c7b6;font-variant-numeric:tabular-nums;width:150px}
-.logo-bar i{position:relative;flex:1;height:3px;background:#53594e;border-radius:2px}
-.logo-bar b{position:absolute;inset:0 38% 0 0;background:var(--orange);border-radius:2px}
-.logo-bar u{position:absolute;left:62%;top:50%;width:9px;height:9px;margin:-4.5px 0 0 -4.5px;background:var(--ivory);border-radius:50%}
-.logo:focus-visible{outline:3px solid var(--orange);outline-offset:4px}
 @media(max-width:900px){html[lang="en"] .intro{grid-template-columns:1fr}html[lang="en"] .intro p,html[lang="en"] .summary{max-width:620px}}
-@media(max-width:540px){.logo-bar{display:none}.logo-play{width:26px;height:26px}.logo-name{font-size:1.3rem}}
+.logo{display:inline-flex;align-items:center;gap:9px;flex:0 0 auto;padding:7px 15px 7px 9px;margin:4px 6px 4px 2px;background:var(--orange);border:2px solid var(--ivory);color:var(--ink);text-decoration:none;transform:rotate(-3deg);transition:transform .2s ease}
+.logo:hover{transform:rotate(-1deg)}
+.logo-play{width:28px;height:28px;flex:0 0 auto}
+.logo-play circle{fill:var(--ink)}.logo-play path{fill:var(--orange)}
+.logo-name{font-family:"Noto Sans TC",system-ui,sans-serif;font-weight:900;font-size:1.55rem;line-height:1;letter-spacing:.02em;white-space:nowrap}
+html[lang="en"] .logo-name{font-family:system-ui,sans-serif;font-size:1.3rem;letter-spacing:-.01em}
+.logo:focus-visible{outline:3px solid var(--ivory);outline-offset:4px}
+@media(max-width:540px){.logo{padding:6px 12px 6px 8px}.logo-play{width:24px;height:24px}.logo-name{font-size:1.3rem}html[lang="en"] .logo-name{font-size:1.12rem}}
+@media(prefers-reduced-motion:reduce){.logo{transition:none}}
 </style>
 </head>
 <body>
 <div class="hero"><div class="wrap">
-<header><a class="logo" href="#" aria-label="散場後...，回到頁首"><svg class="logo-play" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="11"/><path d="M8.5 6.5v9l7-4.5z"/></svg><span class="logo-text"><span class="logo-name">散場後...</span><span class="logo-bar" aria-hidden="true"><span>0:00</span><i><b></b><u></u></i><span>∞</span></span></span></a><nav aria-label="章節"><a href="#opportunity">機會</a><a href="#gap">缺口</a><a href="#route">音樂路徑</a><a href="#pilot">試辦計畫</a></nav>
+<header><a class="logo" href="#" aria-label="散場後...，回到頁首"><svg class="logo-play" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="11"/><path d="M8.5 6.5v9l7-4.5z"/></svg><span class="logo-text"><span class="logo-name">散場後...</span></span></a><nav aria-label="章節"><a href="#opportunity">機會</a><a href="#gap">缺口</a><a href="#route">音樂路徑</a><a href="#pilot">試辦計畫</a></nav>
 <div class="language-switch" role="group" aria-label="選擇語言 / Language">
 <button type="button" data-language="zh" lang="zh-Hant-TW" aria-pressed="true">中文</button>
 <button type="button" data-language="en" lang="en" aria-pressed="false">EN</button>
