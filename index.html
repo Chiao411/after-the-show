@@ -28,7 +28,7 @@ header a{text-decoration:none}
 nav{display:flex;flex-wrap:wrap;gap:20px;font-size:.86rem}
 nav a:hover{text-decoration:underline}
 .intro{display:grid;grid-template-columns:minmax(0,.83fr) minmax(0,1.17fr);gap:35px;align-items:center;padding:58px 0 67px}
-h1{font-size:clamp(3.15rem,7.55vw,7.3rem);font-weight:900;letter-spacing:-.075em;line-height:1.01;margin:12px 0 20px}
+h1{font-size:clamp(2.4rem,5.6vw,4.5rem);font-weight:900;letter-spacing:-.075em;line-height:1.01;margin:12px 0 20px}
 .intro p{max-width:435px;color:#e5dece}
 .intro .question{font-size:clamp(1.05rem,1.9vw,1.37rem);font-weight:750;color:var(--ivory);margin-bottom:6px}
 .hero-art{position:relative;min-width:0}
@@ -102,6 +102,7 @@ summary{cursor:pointer;font-weight:750}
  .wrap{width:calc(100% - 48px)}.intro{gap:22px;padding:42px 0 48px}.song-card summary{min-height:83px}.record-icon{width:26px;height:26px}.chart-table td:last-child{max-width:200px}
 }
 @media(max-width:680px){
+ html[lang^="zh"] h1{font-size:clamp(2.4rem,13vw,4.6rem)}
  .wrap{width:calc(100% - 34px)}header{flex-wrap:wrap;gap:10px;padding:15px 0}nav{gap:12px 15px}
  .intro,.song-grid{grid-template-columns:1fr}.intro{gap:25px;padding:31px 0 36px}.hero-art figcaption{text-align:left}.hero-art img{aspect-ratio:1.65}
  main>section{padding:47px 0}.deck{margin-bottom:18px}h2{text-wrap:initial}
@@ -115,6 +116,7 @@ summary{cursor:pointer;font-weight:750}
 .language-switch button{border:0;background:transparent;color:var(--ivory);font:inherit;font-size:.78rem;font-weight:750;padding:5px 9px;cursor:pointer;white-space:nowrap}
 .language-switch button[aria-pressed="true"]{background:var(--ivory);color:var(--ink)}
 .language-switch button:focus-visible{outline:2px solid var(--orange);outline-offset:2px}
+html[lang^="zh"] h1{white-space:nowrap}
 html[lang="en"] h1{font-size:clamp(2.75rem,5.8vw,5.75rem);letter-spacing:-.065em}
 html[lang="en"] .ticket-main strong{font-size:clamp(2.65rem,7vw,6.35rem)}
 html[lang="en"] .pilot-lead .big small{font-size:.28em}
@@ -137,7 +139,7 @@ html[lang="en"] .chart-table tbody th small{max-width:145px}
 </div></header>
 <div class="intro">
 <div><div class="eyebrow">CHIAO HSU · SPOTIFY TAIWAN 個人行銷提案</div>
-<h1>從台灣<br>現場出發</h1>
+<h1>從台灣<span>現場出發</span></h1>
 <p class="question">演出結束後，樂迷還會回來聽嗎？</p>
 <p>把藝人、場館和樂迷記得的那一晚，編成一條可以點開來聽的音樂路徑。</p>
 <div class="hero-actions"><a class="cta" href="#route">選一首歌開始 ↓</a><a class="secondary" href="#market">看完整提案 ↓</a></div></div>
@@ -246,7 +248,7 @@ const englishCopy = {
   "音樂路徑": "Listening route",
   "試辦設計": "Pilot",
   "CHIAO HSU · SPOTIFY TAIWAN 個人行銷提案": "CHIAO HSU · A MARKETING PROPOSAL FOR SPOTIFY TAIWAN",
-  "從台灣": "From Taiwan’s",
+  "從台灣": "From Taiwan’s ",
   "現場出發": "Live Stages",
   "演出結束後，樂迷還會回來聽嗎？": "When the show ends, will fans come back to listen?",
   "把藝人、場館和樂迷記得的那一晚，編成一條可以點開來聽的音樂路徑。": "A listening route built around the songs and stories that artists, venues, and fans remember from a night out.",
